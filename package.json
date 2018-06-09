@@ -1,15 +1,19 @@
 {
     "name": "vscode-file-header",
     "displayName": "vscode-file-header",
-    "description": "",
+    "description": "insert header comment,and automatically update the time",
     "version": "0.0.1",
-    "publisher": "vscode-file-header",
+    "publisher": "cyseria",
     "engines": {
         "vscode": "^1.24.0"
     },
     "categories": [
         "Other"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cyseria/vscode-file-header.git"
+    },
     "activationEvents": [
         "onCommand:extension.addFileHeader"
     ],
@@ -23,7 +27,14 @@
                     "type": "object",
                     "default": {
                         "author": "your name",
-                        "email": "your email"
+                        "email": "your email",
+                        "config": {
+                            "file": "😐file",
+                            "email": "😐email",
+                            "author": "😐cyseria",
+                            "createTime": "😐ceateTime"
+                        },
+                        "tpl": ""
                     },
                     "description": "By default, here custom file header "
                 }
@@ -33,6 +44,13 @@
             {
                 "command": "extension.addFileHeader",
                 "title": "😋 addFileHeader"
+            }
+        ],
+        "keybindings": [                              
+            {
+                "command": "extension.addFileHeader",
+                "key": "ctrl+shift+h",
+                "mac": "cmd+shift+h"
             }
         ]
     },
