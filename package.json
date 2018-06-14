@@ -15,7 +15,7 @@
         "url": "https://github.com/cyseria/vscode-file-header.git"
     },
     "activationEvents": [
-        "onCommand:extension.addFileHeader"
+        "*"
     ],
     "main": "./extension",
     "contributes": {
@@ -28,13 +28,7 @@
                     "default": {
                         "author": "your name",
                         "email": "your email",
-                        "config": {
-                            "file": "😐file",
-                            "email": "😐email",
-                            "author": "😐cyseria",
-                            "createTime": "😐ceateTime"
-                        },
-                        "tpl": ""
+                        "saveTime": 10
                     },
                     "description": "By default, here custom file header "
                 }

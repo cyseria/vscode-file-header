@@ -1,3 +1,49 @@
-// Place your settings in this file to overwrite default and user settings.
 {
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "files.associations": {
+        "*.tag": "html",
+        "*.svelte": "html",
+        "*.scss": "scss",
+        "*.swig": "swig"
+    },
+    "fecs.auto": true,
+    "fecs.level": 2,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/bower_components": true,
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/bower_components/**": true,
+        "**/dist/**": true
+    },
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.confirmDelete": false,
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.tag"
+    ],
+    "fileheader.custom": {
+        "author": "manqing",
+        "email": "chenmanqing@baidu.com",
+    },
+    "[swig]": {},
+    "window.zoomLevel": 0
 }

@@ -1,16 +1,5 @@
-/**
- * @author Cyseria
- */
-
 const vscode = require('vscode');
 
-/**
- * 将 Date 转化为指定格式的string(本地时间)
- * @function formatDate
- * @param {Date} date
- * @param {string} fmt 格式：yyyy-MM-dd HH:mm:ss
- * @returns {String}
-*/
 function formatDate(date, fmt) {
     if (!date) return '';
     if (!fmt) fmt = 'yyyy-MM-dd HH:mm:ss';
@@ -91,6 +80,7 @@ function activate(context) {
 
     // when save
     vscode.workspace.onDidSaveTextDocument(function (file) {
+        console.log('save')
         setTimeout(function () {
             try {
                 const editor = vscode.window.activeTextEditor;
@@ -102,7 +92,6 @@ function activate(context) {
                 for (let i = 0; i < lineCount; i++) {
                     const linetAt = document.lineAt(i);
                     let line = linetAt.text.trim();
-
                     for (let key in stringConfig) {
                         const data = stringConfig[key];
                         if (line.indexOf(data.desc) > -1) {
@@ -126,7 +115,12 @@ function activate(context) {
                     }
                 }
 
-                if (diff > 1) {
+                let savetime = 10;
+                if (!!config.saveTime) {
+                    savetime = config.saveTime;
+                }
+
+                if (diff > savetime) {
                     setTimeout(function () {
                         editor.edit(function (edit) {
                             for (let key in stringConfig) {
