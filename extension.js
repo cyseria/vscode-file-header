@@ -40,11 +40,11 @@ const stringConfig = {
 // 初始化模板
 function compileFileHeader(config) {
     var line = "/**\n";
-    line += " * @file \n";
-    line += ` * @author ${config.author} <${config.email}> \n`;
-    line += ` * @created time: ${config.createTime} \n`;
-    line += ` * ${stringConfig.lastModifyUser.desc} ${config.author} \n`;
-    line += ` * ${stringConfig.lastModifyTime.desc} ${config.lastModifyTime} \n`;
+    line += " * @file\n";
+    line += ` * @author ${config.author} <${config.email}>\n`;
+    line += ` * @created time: ${config.createTime}\n`;
+    line += ` * ${stringConfig.lastModifyUser.desc} ${config.author}\n`;
+    line += ` * ${stringConfig.lastModifyTime.desc} ${config.lastModifyTime}\n`;
     line += " */\n\n";
     return line;
 };
