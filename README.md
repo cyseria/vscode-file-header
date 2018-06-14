@@ -37,7 +37,30 @@ vsce package
 至于发布线上, 有兴趣自行查找 :)
 
 ## Features
-
-- [] add test
 - [] 配置模板
+
+```javascript
+{
+    "author": "Cyseria", // 个人名字, 用于创建文件和最后修改文件
+    "email": "xcyseria@gmail.com", // 个人邮箱
+    "saveTime": 10, // 保存更新时间间隔, 例如这里距离上次改动超过 10s 才会更新
+    // 暂时暴露出来的变量有:
+    // 配置信息里输入的: author, email
+    // 系统自动生成的: createTime, lastModifyTime, fileName
+    tpl: ```
+     /**\n";
+       * @file\n";
+       * @author: ${author} <${email}>\n
+       * 
+       * @name1: aaaaa\n
+       * @name2: bbbbbbb\n
+       * 
+       * @created time: ${createTime}\n
+       * @last modified by: ${author}\n
+       * @last modified time ${lastModifyTime}\n;
+       */\n\n
+    ```
+}
+```
+- [] add test
 
